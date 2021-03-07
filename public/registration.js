@@ -64,7 +64,7 @@ function startSpeech(){
      if(content2.length){
         content2+='';
     }*/
-    //recognition.start();
+    recognition.start();
     //  alert("hello");
       //////////////////////////////////////////
 }
