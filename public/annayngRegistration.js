@@ -1,10 +1,10 @@
-// test
+
 
 annyang.setLanguage('en-US');
 if (annyang) {
    // alert("Hello");
       var commands = {
-     'firstname *tag': function(variable) {
+     'name *tag': function(variable) {
       let firstname = document.getElementById("firstname");
       firstname.value = variable; 
       },
@@ -29,9 +29,13 @@ if (annyang) {
       password_confirm.value = variable; 
       },
 
-      'submit *tag': function() {
+      'register *tag': function() {
          let registration = document.getElementById("registration");
-         registration.remove();
+         let submit = document.getElementById("submit");
+         alert("hello");
+         //submit.trigger();
+         //registration.remove();
+         $('#submit').trigger('click');
       }
   };
 
