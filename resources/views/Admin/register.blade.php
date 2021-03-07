@@ -7,13 +7,14 @@
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{{ URL::asset('registration.js') }}"></script>
-<script src="{{ URL::asset('demo.js') }}"></script>
+<script src="{{ URL::asset('annayngRegistration.js') }}"></script>
 <script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
 </head>
-<body onload="startSpeech();textSpeak1()">
+<body>
 <div class="container">
 <div>
-<form name="registration" class="form-horizontal" action=" {{url('/register')}}" method="POST">
+<form id="registration" class="form-horizontal" action=" {{url('/register')}}" method="POST">
     {{ csrf_field() }}
     <div id="legend">
       <legend class="">Register</legend>
@@ -31,9 +32,9 @@
     </div>
     <div id="fstname"class="control-group">
       <!-- Username -->
-      <label class="control-label"  for="username">First Name</label>
+      <label class="control-label"  for="firstname">First Name</label>
       <div class="controls">
-        <input type="text" id="firstname" name="firstname"  onkeyup="autotab(this,document.registration.lastname)"placeholder="" class="input-xlarge" maxlength="5">
+        <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge" maxlength="5">
     </div>
     </div>
      <div class="control-group">
@@ -73,7 +74,7 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </div>
     </div>
 </form>
@@ -87,5 +88,7 @@
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="registration.js"></script>
+<script src="annayngRegistration.js"></script>
 </html>
