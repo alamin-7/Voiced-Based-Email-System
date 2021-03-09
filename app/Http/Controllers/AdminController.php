@@ -60,4 +60,8 @@ class AdminController extends Controller
     	$registrations->save();
     	return redirect('/')->with('response', 'Registered Successfully');
     }
+    public function dashboard()
+    {
+        return view('admin.dashboard');
+    }
 }

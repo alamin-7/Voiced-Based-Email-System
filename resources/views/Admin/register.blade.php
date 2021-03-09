@@ -14,7 +14,7 @@
 <body>
 <div class="container">
 <div>
-<form id="registration" class="form-horizontal" action=" {{url('/register')}}" method="POST">
+<form id="registration" class="form-horizontal" action="{{url('/register')}}" method="POST" >
     {{ csrf_field() }}
     <div id="legend">
       <legend class="">Register</legend>
@@ -74,7 +74,7 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" id="submit" class="btn btn-success">Submit</button>
       </div>
     </div>
 </form>

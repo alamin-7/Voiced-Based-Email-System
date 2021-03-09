@@ -87,7 +87,7 @@
                <div class="links">
                     <a href="{{URL::to('/register')}}">Create Account</a>
                     <a href="{{URL::to('/login')}}">Login</a>
-
+                    <a href="{{URL::to('/dashboard')}}">Test</a>
                 </div>
 
             </div>
