@@ -64,4 +64,8 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+    public function writemessage()
+    {
+        return view('admin.writemessage');
+    }
 }
