@@ -21,4 +21,4 @@ Route::post('/register', 'AdminController@register');
 Route::get('/login', 'AdminController@login');
 Route::post('/loginsubmit', 'AdminController@loginsubmit');
 Route::get('/dashboard', 'AdminController@dashboard');
-
+Route::get('/writemessage', 'AdminController@writemessage');
