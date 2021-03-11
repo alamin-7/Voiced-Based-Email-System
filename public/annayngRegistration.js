@@ -30,13 +30,34 @@ if (annyang) {
       },
 
       'register *tag': function() {
-         let registration = document.getElementById("registration");
+         //let registration = document.getElementById("registration");
          let submit = document.getElementById("submit");
          alert("hello");
          //submit.trigger();
          //registration.remove();
          $('#submit').trigger('click');
+      },
+
+      'last *tag': function()
+      {
+        alert("Hello");
+        let test = document.getElementById("test");
+        $('#test').trigger('click');
+      },
+
+      'to *tag': function(variable) {
+      let reciver = document.getElementById("reciver");
+      reciver.value = variable; 
+      },
+      'subject *tag': function(variable) {
+      let subject = document.getElementById("subject");
+      subject.value = variable; 
+      },
+      'write *tag': function(variable) {
+      let message = document.getElementById("message");
+      message.value = variable; 
       }
+
   };
 
   annyang.addCommands(commands);
