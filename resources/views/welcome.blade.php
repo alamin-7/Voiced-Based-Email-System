@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <script src="{{ URL::asset('annayngRegistration.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
 
         <!-- Styles -->
         <style>
@@ -87,10 +89,13 @@
                <div class="links">
                     <a href="{{URL::to('/register')}}">Create Account</a>
                     <a href="{{URL::to('/login')}}">Login</a>
-                    <a href="{{URL::to('/dashboard')}}">Test</a>
+                    <a id="test" href="{{URL::to('/dashboard')}}">Test</a>
                 </div>
-
             </div>
         </div>
     </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script src="registration.js"></script>
+<script src="annayngRegistration.js"></script>
 </html>
