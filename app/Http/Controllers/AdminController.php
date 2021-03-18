@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Registration;
+use App\Message;
 use App\http\Requests;
 use DB;
 use Illuminate\Support\Facades\Redirect;
@@ -67,5 +68,15 @@ class AdminController extends Controller
     public function writemessage()
     {
         return view('admin.writemessage');
+    }
+    public function store_message(Request $req)
+    {
+        $messages = new Message;
+        $messages->sender = $req->input('sender');
+        $messages->reciver = $req->input('reciver');
+        $messages->message = $req->input('message');
+        $messages->subject = $req->input('subject');
+        $messages->save();
+        return redirect('/dashboard')->with('response', 'Registered Successfully');
     }
 }
