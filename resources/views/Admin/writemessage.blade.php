@@ -7,6 +7,8 @@
 <script src="{{ URL::asset('annayngRegistration.js') }}"></script>
 <script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <style>
 .container {
@@ -76,11 +78,18 @@ li a:hover:not(.active) {
 
 <div class="container">
 <div  class="maincontent">
+    <form id="message"  action="{{url('/writemessage')}}" method="POST" >
+    {{ csrf_field() }}
+    <h4>From:</h4>
+    <input type="text" name="sender" id="sender"><br>
     <h4>To:</h4>
     <input type="text" name="reciver" id="reciver"><br>
     <h4>Subject:</h4>
     <input type="text" name="subject" id="subject"><br><br>
-    <textarea id="message" name="w3review" rows="10" cols="120"></textarea>
+    <textarea  name="message" id="message" rows="10" cols="120"></textarea>
+    <br><br>
+    <button type="submit" id="send" class="btn btn-success">Send</button>
+</form>
 </div>
 </div>
 </div>
