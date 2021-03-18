@@ -40,8 +40,8 @@ if (annyang) {
 
       'last *tag': function()
       {
-        alert("Hello");
         let test = document.getElementById("test");
+         alert("Hello");
         $('#test').trigger('click');
       },
 
@@ -53,7 +53,8 @@ if (annyang) {
       let subject = document.getElementById("subject");
       subject.value = variable; 
       },
-      'write *tag': function(variable) {
+      'message *tag': function(variable) {
+        //alert("Hello");
       let message = document.getElementById("message");
       message.value = variable; 
       }
