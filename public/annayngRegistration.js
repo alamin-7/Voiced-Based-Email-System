@@ -57,8 +57,16 @@ if (annyang) {
         //alert("Hello");
       let message = document.getElementById("message");
       message.value = variable; 
-      }
+      },
 
+      'send *tag': function() {
+         //let registration = document.getElementById("registration");
+         let send = document.getElementById("send");
+         //alert("hello");
+         //submit.trigger();
+         //registration.remove();
+         $('#send').trigger('click');
+      }
   };
 
   annyang.addCommands(commands);
