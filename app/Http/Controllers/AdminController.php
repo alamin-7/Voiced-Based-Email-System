@@ -79,4 +79,9 @@ class AdminController extends Controller
         $messages->save();
         return redirect('/dashboard')->with('response', 'Registered Successfully');
     }
+    public function index()
+    {
+         $users = DB::select('select subject,message from messages where reciver="arafat@gmail.com"');
+         return view('admin.dashboard',['users'=>$users]);
+    }
 }
