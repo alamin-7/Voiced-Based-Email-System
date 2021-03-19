@@ -70,15 +70,23 @@ li a:hover:not(.active) {
 <div class="header">
 <ul>
   <li><a href="wip.html">Inbox Page</a></li>
-  <li><a href="wip.html">Test1</a></li>
-  <li><a href="wip.html">Test2</a></li>
-  <li><a href="wip.html">Test3</a></li>
+  <li><a href="wip.html">All Catagories</a></li>
+  <li><a href="wip.html">Social</a></li>
+  <li><a href="wip.html">Important</a></li>
 </ul>
 </div>
 
 <div class="container">
-<div  class="maincontent">
-    <form id="message"  action="{{url('/writemessage')}}" method="POST" >
+  <h4><a href="{{URL::to('/writemessage')}}">Inbox</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}">Important</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}">Draft</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}">Sent</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}">Spam</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}">Trash</a></h4>
+
+</div>
+<div class="maincontent">
+    <form id="writemessage"  action="{{url('/writemessage')}}" method="POST" >
     {{ csrf_field() }}
     <h4>From:</h4>
     <input type="text" name="sender" id="sender"><br>
@@ -90,8 +98,6 @@ li a:hover:not(.active) {
     <br><br>
     <button type="submit" id="send" class="btn btn-success">Send</button>
 </form>
-</div>
-</div>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
