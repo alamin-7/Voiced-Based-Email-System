@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Registration;
 use App\Message;
 use App\http\Requests;
+use Illuminate\Support\Facades\Hash;
 use DB;
 use Illuminate\Support\Facades\Redirect;
 use Session;
@@ -22,18 +23,20 @@ class AdminController extends Controller
         return view('admin.register');
     }
 
-	public function loginsubmit(Request $req)
+	/*public function loginsubmit(Request $req)
 	{
-		Registration::select('*')->where(
+		$users = Registration::select('*')->where(
     		[
-    			['username', '=', $req->email],
+    			['username', '=', $req->username],
     			['password','=', $req->password]
     		]
     	)->get();
     	$req->session()->put('logData',[$req->input()]);
-    	return redirect('/login');
+        if($users){
+    	return redirect('/dashboard');
+        }
 		//return view('admin.login');
-	}
+	}*/
 
     public function register(Request $req)
     {
@@ -59,12 +62,12 @@ class AdminController extends Controller
     	$registrations->password = $req->input('password');
     	$registrations->password_confirm = $req->input('password_confirm');
     	$registrations->save();
-    	return redirect('/')->with('response', 'Registered Successfully');
+    	return redirect('/dashboard')->with('response', 'Registered Successfully');
     }
-    public function dashboard()
+    /*public function dashboard()
     {
-        return view('admin.dashboard');
-    }
+        return redirect('/dashboard');
+    }*/
     public function writemessage()
     {
         return view('admin.writemessage');
@@ -84,4 +87,36 @@ class AdminController extends Controller
          $users = DB::select('select subject,message from messages where reciver="arafat@gmail.com"');
          return view('admin.dashboard',['users'=>$users]);
     }
+    /*public function loginsubmit(Request $req)
+    {
+        $users = DB::select('select username,password from registrations where
+            username="$req->username"');
+        if($users){
+        return view('admin.dashboard', ['users'=>$users]);
+        }
+        else
+        {
+            echo "Errors"
+        }
+    }*/
+
+     public function loginsubmit(Request $request)
+    {
+     $username = $request->input('username');
+     $password = $request->input('password');
+     $old = Hash::make('123');
+
+     $user = Registration::where('username', '=', $username)->first();
+     if (!$user) {
+        return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id', 'data'=> $password]);
+     }
+     if($password == $user->password)
+     {
+        return redirect('/dashboard');
+     }
+     /*if ((Hash::check($password, $user->password))) {
+        return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password', 'data'=> $password]);
+     }*/
+       // return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
+     }
 }

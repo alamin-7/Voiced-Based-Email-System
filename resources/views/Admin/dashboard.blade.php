@@ -70,9 +70,9 @@ li a:hover:not(.active) {
 <div class="header">
 <ul>
   <li><a href="{{URL::to('/writemessage')}}">Compose</a></li>
-  <li><a href="wip.html">All Catagories</a></li>
-  <li><a href="wip.html">Social</a></li>
-  <li><a href="wip.html">Important</a></li>
+  <li><a href="#">All Catagories</a></li>
+  <li><a href="#">Social</a></li>
+  <li><a href="#">Important</a></li>
 </ul>
 </div>
 <div class="container">

@@ -29,26 +29,32 @@ if (annyang) {
       password_confirm.value = variable; 
       },
 
-      'register *tag': function() {
+      'submit *tag': function() {
          //let registration = document.getElementById("registration");
          let submit = document.getElementById("submit");
-         alert("hello");
+        // alert("hello");
          //submit.trigger();
          //registration.remove();
          $('#submit').trigger('click');
       },
 
-      'last *tag': function()
+      'test *tag': function()
       {
-        let test = document.getElementById("test");
+         let test = document.getElementById("test");
          alert("Hello");
         $('#test').trigger('click');
+      },
+
+      'sender *tag': function(variable) {
+      let reciver = document.getElementById("sender");
+      sender.value = variable; 
       },
 
       'to *tag': function(variable) {
       let reciver = document.getElementById("reciver");
       reciver.value = variable; 
       },
+
       'subject *tag': function(variable) {
       let subject = document.getElementById("subject");
       subject.value = variable; 
