@@ -16,7 +16,7 @@ if (annyang) {
 
       'username *tag': function(variable) {
       let username = document.getElementById("username");
-      username.value = variable; 
+      username.value = variable.toLowerCase().concat("@gmail.com"); 
       },
 
      'password *tag': function(variable) {

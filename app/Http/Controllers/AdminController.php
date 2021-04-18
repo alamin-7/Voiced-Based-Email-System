@@ -102,6 +102,23 @@ class AdminController extends Controller
 
      public function loginsubmit(Request $request)
     {
+            $messages = [
+            "username.required" => "Username is required",
+            "username.username" => "Username is not valid",
+            "username.exists" => "Username doesn't exists",
+            "password.required" => "Password is required",
+            "password.min" => "Password must be at least 3 characters"
+        ];
+
+
+        $this->validate($request,[
+            'username'=>'required',
+            'password' => 'min:3|required_with:password_confirm|same:password_confirm',
+            'password_confirm'=>'min:3',
+
+        ]);
+
+
      $username = $request->input('username');
      $password = $request->input('password');
      $old = Hash::make('123');
@@ -110,6 +127,11 @@ class AdminController extends Controller
      if (!$user) {
         return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id', 'data'=> $password]);
      }
+     /*(if(!$user){
+         return redirect()->back()->withInput($request->only('username', 'remember'))->withErrors([
+                'approve' => 'Invalid username or password',
+            ]);
+     }*/
      if($password == $user->password)
      {
         return redirect('/dashboard');
