@@ -38,11 +38,21 @@ if (annyang) {
          $('#submit').trigger('click');
       },
 
-      'test *tag': function()
+      'google *tag': function()
       {
-         let test = document.getElementById("test");
-         alert("Hello");
+        let test = document.getElementById("test");
+        alert("Hello");
         $('#test').trigger('click');
+
+
+        /*$(".link-button").click(function () {
+        window.location.href = $(this).data('href');
+        });*/
+        /*alert("Hello");
+        $(".waitingTime .button").click(function () {
+        window.location.href = "<?php echo URL::to('/dashboard'); ?>";
+        });
+        alert("H");*/
       },
 
       'sender *tag': function(variable) {
@@ -59,11 +69,35 @@ if (annyang) {
       let subject = document.getElementById("subject");
       subject.value = variable; 
       },
-      'message *tag': function(variable) {
+      'message *tag': function() {
+
+      	//*********************************************//
         //alert("Hello");
-      let message = document.getElementById("message");
-      message.value = variable; 
-      },
+    // recognition.start();
+
+     /*var speechRecognition = window.webkitSpeechRecognition;
+     var recognition = new speechRecognition();
+     var content = '';
+     var message = $('#message');
+     recognition.continuous = true;
+
+     recognition.onresult = function(event){
+	var current = event.resultIndex;
+
+	var transcript = even.results[current][0].transcript;
+
+	content+=transcript;
+
+	message.val(content);
+    }
+
+    if (Content.length) {
+     Content += ' ';
+    }*/
+
+     let message = document.getElementById("message");
+     message.value = variable; 
+    },
 
       'send *tag': function() {
          //let registration = document.getElementById("registration");

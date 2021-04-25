@@ -11,6 +11,13 @@
         <script src="{{ URL::asset('annayngRegistration.js') }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
 
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="{{ URL::asset('Annynghref.js') }}"></script>
+        <script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
         <!-- Styles -->
         <style>
             html, body {
@@ -84,18 +91,19 @@
             <div class="content">
                 <div class="title m-b-md">
                     Voiced Based Email System
-                </div>
+            </div>
 
-               <div class="links">
-                    <a href="{{URL::to('/register')}}">Create Account</a>
-                    <a href="{{URL::to('/login')}}">Login</a>
-                    <a id="test" href="{{URL::to('/dashboard')}}">Test</a>
-                </div>
+            <div class="links">
+                    <a href="{{URL::to('/register')}}"><button id="create"type="button" >CREATE ACCOUNT</button></a>
+                    <a id="test" href="{{URL::to('/login')}}"><button id="login"type="button" >Login</button></a>
+                     <a href="{{URL::to('/dashboard')}}"><button id="user"type="button" >USER ACCOUNT</button></a>
+            </div>
+
             </div>
         </div>
     </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-<script src="registration.js"></script>
-<script src="annayngRegistration.js"></script>
+<script src="Annaynghref.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </html>

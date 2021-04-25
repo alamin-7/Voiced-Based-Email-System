@@ -17,7 +17,7 @@ if (annyang) {
      'submit *tag': function() {
      //let registration = document.getElementById("registration");
       let login = document.getElementById("login");
-        // alert("hello")
+     // alert("hello")
       $('#login').trigger('click');
       }
    
