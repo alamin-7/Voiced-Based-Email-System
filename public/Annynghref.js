@@ -5,7 +5,7 @@ if (annyang) {
    // alert("Hello");
       var commands = {
 
-      'create *tag': function()
+      'register *tag': function()
       {
         let create = document.getElementById("create");
         alert("Hello");

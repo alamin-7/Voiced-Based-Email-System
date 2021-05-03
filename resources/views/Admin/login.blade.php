@@ -43,7 +43,7 @@
 
     <div class="control-group">
       <!-- Username -->
-      <label class="control-label"  for="email">Email</label>
+      <label class="control-label"  for="email">Username</label>
       <div class="controls">
         <input type="text" id="username" name="username" placeholder="" onclick="record3()" class="input-xlarge">
       </div>

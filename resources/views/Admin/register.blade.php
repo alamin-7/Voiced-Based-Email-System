@@ -34,7 +34,7 @@
       <!-- Username -->
       <label class="control-label"  for="firstname">First Name</label>
       <div class="controls">
-        <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge" maxlength="5">
+        <input type="text" id="first-name"  placeholder="" class="input-xlarge" maxlength="10">
     </div>
     </div>
      <div class="control-group">
@@ -91,4 +91,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="registration.js"></script>
 <script src="annayngRegistration.js"></script>
+<script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
 </html>
