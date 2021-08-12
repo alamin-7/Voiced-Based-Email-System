@@ -5,6 +5,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{{ URL::asset('registration.js') }}"></script>
 <script src="{{ URL::asset('annayngRegistration.js') }}"></script>
+<script src="{{ URL::asset('readMessage.js') }}"></script>
 <script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -70,30 +71,33 @@ li a:hover:not(.active) {
 <div class="header">
 <ul>
   <li><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Compose</button></a></li>
-  <li><a href="#">All Catagories</a></li>
-  <li><a href="#">Social</a></li>
-  <li><a href="#">Important</a></li>
+   <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >All Catagories</button></a></li>
+    <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Social</button></a></li>
+     <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Important</button></a></li>
 </ul>
 </div>
 <div class="container">
-  <h4><a href="{{URL::to('/writemessage')}}">Inbox</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Important</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Draft</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Sent</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Spam</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Trash</a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Inbox</button></a></h4>
+    <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Important</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Draft</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Sent</button></a></h4>
+   <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Spam</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Trash</button></a></h4>
+
 
 </div>
 <div  class="maincontent">
-<table border = "1">
+<table border = "1" id="mytable">
 <tr>
 <td colspan="10" align="center">Subject</td>
 <td colspan="16" align="center">Message</td>
+<td colspan="10" align="center">From</td>
 </tr>
 @foreach ($users as $user)
-<tr>
+<tr>  
 <td colspan="10">{{ $user->subject }}</td>
 <td colspan="16">{{ $user->message }}</td>
+<td colspan="10">{{ $user->sender }}</td>
 </tr>
 @endforeach
 </table>
@@ -103,4 +107,6 @@ li a:hover:not(.active) {
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="registration.js"></script>
 <script src="annayngRegistration.js"></script>
+<script src="readMessage.js"></script>
+<script src="dashboard.js"></script>
 </html>

@@ -30,18 +30,18 @@
       </div>
       @endif
     </div>
-    <div id="fstname"class="control-group">
+    <div class="control-group">
       <!-- Username -->
       <label class="control-label"  for="firstname">First Name</label>
       <div class="controls">
-        <input type="text" id="first-name"  placeholder="" class="input-xlarge" maxlength="10">
+        <input type="text" id="firstname" name="firstname" onkeyup="autotab(this,document.registration.username)" placeholder="" class="input-xlarge" maxlength="100">
     </div>
     </div>
      <div class="control-group">
       <!-- Username -->
       <label class="control-label"  for="lastname">Last Name</label>
       <div class="controls">
-        <input type="text" id="lastname" name="lastname" onkeyup="autotab(this,document.registration.username)" placeholder="" class="input-xlarge" maxlength="5">
+        <input type="text" id="lastname" name="lastname" onkeyup="autotab(this,document.registration.username)" placeholder="" class="input-xlarge" maxlength="100">
       </div>
     </div>
 
@@ -49,7 +49,7 @@
       <!-- Username -->
       <label class="control-label"  for="username">User Name</label>
       <div class="controls">
-        <input type="text" id="username" name="username" onkeyup="autotab(this,document.registration.password)"  placeholder=""  class="input-xlarge" maxlength="10">
+        <input type="text" id="username" name="username" onkeyup="autotab(this,document.registration.password)"  placeholder=""  class="input-xlarge" maxlength="100">
       </div>
     </div>
 
@@ -58,7 +58,7 @@
       <!-- Password-->
       <label class="control-label" for="password">Password</label>
       <div class="controls">
-        <input type="password" id="password" name="password" onkeyup="autotab(this,document.registration.password_confirm)" placeholder="" class="input-xlarge" maxlength="5">
+        <input type="password" id="password" name="password" onkeyup="autotab(this,document.registration.password_confirm)" placeholder="" class="input-xlarge" maxlength="100">
       </div>
     </div>
  
@@ -66,7 +66,7 @@
       <!-- Password -->
       <label class="control-label"  for="password_confirm">Password (Confirm)</label>
       <div class="controls">
-        <input type="password" id="password_confirm" name="password_confirm" placeholder=""class="input-xlarge" maxlength="5">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder=""class="input-xlarge" maxlength="100">
         <p class="help-block">Please confirm password</p>
       </div>
     </div>
@@ -91,5 +91,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="registration.js"></script>
 <script src="annayngRegistration.js"></script>
+<script src="register.js"></script>
 <script type="text/javascript" src="http://code.responsivevoice.org/responsivevoice.js"></script>
 </html>

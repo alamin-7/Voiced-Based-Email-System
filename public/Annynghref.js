@@ -21,10 +21,10 @@ if (annyang) {
         });
         alert("H");*/
       },
-       'login *tag': function()
+       'hello *tag': function()
       {
+        alert("hello");
         let login = document.getElementById("login");
-        alert("Hello");
         $('#login').trigger('click');
 
 
@@ -37,7 +37,7 @@ if (annyang) {
         });
         alert("H");*/
       },
-       'user *tag': function()
+       'hell *tag': function()
       {
         let user = document.getElementById("user");
         alert("Hello");
@@ -57,5 +57,5 @@ if (annyang) {
 
   annyang.addCommands(commands);
   annyang.start();
-  //annyang.start({ autoRestart: true, continuous: false });
+  annyang.start({ autoRestart: true, continuous: false });
 }

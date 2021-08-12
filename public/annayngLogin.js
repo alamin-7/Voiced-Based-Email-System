@@ -15,7 +15,7 @@ if (annyang) {
       password.value = variable; 
       },
 
-     'submit *tag': function() {
+     'hello *tag': function() {
      //let registration = document.getElementById("registration");
       let login = document.getElementById("login");
       alert("hello")

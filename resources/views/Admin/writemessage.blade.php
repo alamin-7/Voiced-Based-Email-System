@@ -77,12 +77,12 @@ li a:hover:not(.active) {
 </div>
 
 <div class="container">
-  <h4><a href="{{URL::to('/writemessage')}}">Inbox</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Important</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Draft</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Sent</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Spam</a></h4>
-  <h4><a href="{{URL::to('/writemessage')}}">Trash</a></h4>
+ <h4><a href="{{URL::to('/dashboard')}}"><button id="inbox"type="button" >Inbox</button></a></h4>
+    <h4><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Important</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Draft</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Sent</button></a></h4>
+   <h4><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Spam</button></a></h4>
+  <h4><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Trash</button></a></h4>
 
 </div>
 <div class="maincontent">
@@ -94,6 +94,7 @@ li a:hover:not(.active) {
     <input type="text" name="reciver" id="reciver"><br>
     <h4>Subject:</h4>
     <input type="text" name="subject" id="subject"><br><br>
+    <button type="button" id="m">Message</button><br><br>
     <textarea  name="message" id="message" rows="10" cols="120"></textarea>
     <br><br>
     <button type="submit" id="send" class="btn btn-success">Send</button>

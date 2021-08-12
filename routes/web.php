@@ -24,4 +24,12 @@ Route::get('/dashboard', 'AdminController@dashboard');
 Route::get('/writemessage', 'AdminController@writemessage');
 Route::post('/writemessage', 'AdminController@store_message');
 Route::get('/dashboard', 'AdminController@index');
+/*Route::get('/sendmail', function(){
+	$details = [
+		'title'=>'Mail from Surfside media',
+		'body'=>'This is from testing email using smtp'
+	];
+	\Mail::to('alamin188914@gmail.com')->send(new \App\Mail\TestMail($details));
+	echo "Email has been sent";
+});*/
 

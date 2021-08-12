@@ -20,7 +20,7 @@
 <body>
 <div class="container">
 <div>
-<form class="form-horizontal" action="/loginsubmit" method="POST">
+<form class="form-horizontal" action="{{url('/loginsubmit')}}" method="POST">
     {{ csrf_field() }}
     @csrf
 
@@ -77,4 +77,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="registration.js"></script>
 <script src="annayngLogin.js"></script>
+<script src="loginSpeech.js"></script>
 </html>
