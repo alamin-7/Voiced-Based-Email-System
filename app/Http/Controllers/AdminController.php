@@ -10,6 +10,7 @@ use DB;
 use Illuminate\Support\Facades\Redirect;
 use Session;
 session_start();
+use Mail;
 
 class AdminController extends Controller
 {
@@ -74,17 +75,28 @@ class AdminController extends Controller
     }
     public function store_message(Request $req)
     {
+
+          Mail::send('admin.testMail', [
+            'data'=>$req->message
+        ], function($m) use ($req){
+            $m->to($req->reciver);
+            $m->subject($req->subject);
+        });
+
         $messages = new Message;
         $messages->sender = $req->input('sender');
         $messages->reciver = $req->input('reciver');
         $messages->message = $req->input('message');
         $messages->subject = $req->input('subject');
         $messages->save();
+
         return redirect('/dashboard')->with('response', 'Registered Successfully');
     }
+
+
     public function index()
     {
-         $users = DB::select('select subject,message from messages where reciver="arafat@gmail.com"');
+         $users = DB::select('select subject,message, sender from messages where reciver="arafat@gmail.com"');
          return view('admin.dashboard',['users'=>$users]);
     }
     /*public function loginsubmit(Request $req)
@@ -142,5 +154,8 @@ class AdminController extends Controller
        // return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
      return back()->withInput()->withErrors(['username' => 'invalid username or password']);
      //return back()->withInput();
+
+      //$users = DB::select('select subject,message, sender from messages where reciver="arafat@gmail.com"');
+      //return view('admin.dashboard',['users'=>$users]);
      }
 }
