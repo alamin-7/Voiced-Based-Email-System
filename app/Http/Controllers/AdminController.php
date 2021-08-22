@@ -114,6 +114,7 @@ class AdminController extends Controller
 
      public function loginsubmit(Request $request)
     {
+        $request->session()->put('data', $request->input('username'));
             /*$messages = [
             "username.required" => "Username is required",
             "username.username" => "Username is not valid",
@@ -148,6 +149,7 @@ class AdminController extends Controller
      {
         return redirect('/dashboard');
      }
+
      /*if ((Hash::check($password, $user->password))) {
         return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password', 'data'=> $password]);
      }*/

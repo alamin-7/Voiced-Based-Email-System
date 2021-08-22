@@ -23,7 +23,7 @@
 * Header which contain your menu and date 
 */
 .header {
-    width:100%;
+    width:105%;
     height:10%;
     }
 
@@ -61,6 +61,12 @@ li a {
     text-decoration: none;
 }
 
+li p{
+    text-align: right;
+    float: right;
+    color: black;
+}
+
 li a:hover:not(.active) {
     background-color: #000;
 }
@@ -74,6 +80,7 @@ li a:hover:not(.active) {
    <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >All Catagories</button></a></li>
     <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Social</button></a></li>
      <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Important</button></a></li>
+     <li><p>{{session('data')['username']}}</p></li>
 </ul>
 </div>
 <div class="container">
@@ -87,6 +94,10 @@ li a:hover:not(.active) {
 
 </div>
 <div  class="maincontent">
+Search :<br>
+<textarea name="search" id="search" cols="100"></textarea>
+<br>
+<br>
 <table border = "1" id="mytable">
 <tr>
 <td colspan="10" align="center">Subject</td>

@@ -21,7 +21,7 @@ if (annyang) {
         });
         alert("H");*/
       },
-       'hello *tag': function()
+       'login *tag': function()
       {
         alert("hello");
         let login = document.getElementById("login");
@@ -37,7 +37,7 @@ if (annyang) {
         });
         alert("H");*/
       },
-       'hell *tag': function()
+       'user *tag': function()
       {
         let user = document.getElementById("user");
         alert("Hello");

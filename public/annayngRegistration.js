@@ -72,12 +72,12 @@ if (annyang) {
         alert("H");*/
       },
 
-      'from *tag': function(variable) {
+      /*'from *tag': function(variable) {
       	//alert("Hello");
       let reciver = document.getElementById("sender");
       sender.value = variable.toLowerCase().concat("@gmail.com"); 
       Sender();
-      },
+      },*/
 
       'to *tag': function(variable) {
       //	alert("h");
@@ -91,10 +91,12 @@ if (annyang) {
       subject.value = v; 
       Subject();
       },
-      'message *tag': function() {
+      'message *tag': function(v) {
+      let message = document.getElementById("message");
+      message.value = v; 
     
    	//*********************************************//
-    alert("h");
+    //alert("h");
    /* var recognition = new webkitSpeechRecognition(); //get new instance
     recognition.start(); //start it
     recognition.onend = function() { //a function to restart it when it stops
@@ -108,7 +110,7 @@ if (annyang) {
 
        //alert("Hello");
 
-     annyang.addCallback('result',function(whatWasHeard) { document.getElementById("message").value = whatWasHeard[0]; });
+    // annyang.addCallback('result',function(whatWasHeard) { document.getElementById("message").value = whatWasHeard[0]; });
      //message();
     // recognition.start();
      msg();
@@ -194,7 +196,7 @@ $("#m").click(function (event){
          $('#send').trigger('click');
       },
 
-       'new *tag': function(variable)
+       'new *tag': function()
       {
         let compose = document.getElementById("compose");
         //compose.value = variable;
