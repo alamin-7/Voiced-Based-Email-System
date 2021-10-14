@@ -38,7 +38,7 @@ if (annyang) {
   responsiveVoice.speak(str);*/
 },
 
-'hello *tag': function(variable) {
+'search *tag': function(variable) {
       alert("Hello");
       let search= document.getElementById("search");
       search.value = variable; 

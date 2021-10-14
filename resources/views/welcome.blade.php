@@ -25,8 +25,8 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
+                font-weight: 100;
+                height: 50vh;
                 margin: 0;
             }
 
@@ -55,14 +55,14 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 50px;
             }
 
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 30px;
+                font-weight: 300;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -91,13 +91,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Voiced Based Email System
+                    Voiced Based Email System For Visually<br> Imparied People 
                 </div>
 
             <div class="links">
-                    <a href="{{URL::to('/register')}}"><button class="btn btn-success btn-block" id="create"type="button" >CREATE ACCOUNT</button></a>
+                    <a href="{{URL::to('/register')}}"><button id="create"type="button">Register</button></a>
                     <a href="{{URL::to('/login')}}"><button id="login"type="button" >Login</button></a>
-                    <a href="{{URL::to('/dashboard')}}"><button id="user"type="button" >USER ACCOUNT</button></a>
+                   <!--- <a href="{{URL::to('/dashboard')}}"><button id="user"type="button" >USER ACCOUNT</button></a>-->
             </div>
             </div>
             </div>

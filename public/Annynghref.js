@@ -9,7 +9,7 @@ if (annyang) {
       {
         let create = document.getElementById("create");
         alert("Hello");
-        $('#create').trigger('create');
+        $('#create').trigger('click');
 
 
         /*$(".link-button").click(function () {

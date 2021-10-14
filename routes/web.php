@@ -22,6 +22,7 @@ Route::get('/login', 'AdminController@login');
 Route::post('/loginsubmit', 'AdminController@loginsubmit');
 Route::get('/dashboard', 'AdminController@dashboard');
 Route::get('/writemessage', 'AdminController@writemessage');
+Route::get('/dashboard', 'AdminController@writemessage_dashboard');
 Route::post('/writemessage', 'AdminController@store_message');
 Route::get('/dashboard', 'AdminController@index');
 /*Route::get('/sendmail', function(){

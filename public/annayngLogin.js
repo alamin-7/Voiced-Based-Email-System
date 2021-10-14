@@ -15,10 +15,10 @@ if (annyang) {
       password.value = variable; 
       },
 
-     'hello *tag': function() {
+     'submit *tag': function() {
      //let registration = document.getElementById("registration");
+      alert("hello");
       let login = document.getElementById("login");
-      alert("hello")
       $('#login').trigger('click');
       }
    

@@ -65,12 +65,12 @@
     </div>
 </form>
 </div>
-  <div class="form-group">
+ <!-- <div class="form-group">
      	<button id="start-btn" class="btn btn-success btn-block">
      			Start
      	</button>
      	<p id="instruction">Press the start button</p>
-  </div>
+  </div>-->
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

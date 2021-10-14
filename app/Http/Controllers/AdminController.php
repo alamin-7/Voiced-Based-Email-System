@@ -63,7 +63,8 @@ class AdminController extends Controller
     	$registrations->password = $req->input('password');
     	$registrations->password_confirm = $req->input('password_confirm');
     	$registrations->save();
-    	return redirect('/dashboard')->with('response', 'Registered Successfully');
+    	//return redirect('/welcome')->with('response', 'Registered Successfully');
+        return view('welcome');
     }
     /*public function dashboard()
     {
@@ -72,6 +73,10 @@ class AdminController extends Controller
     public function writemessage()
     {
         return view('admin.writemessage');
+    }
+    public function writemessage_dashboard()
+    {
+        return view('admin.dashboard');
     }
     public function store_message(Request $req)
     {

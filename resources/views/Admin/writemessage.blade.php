@@ -32,6 +32,7 @@
     width:80%;
     max-width:1000px;
     background-color: #fff;
+    padding: 2%;
     float:right;
     left:50%;
     height:100%;

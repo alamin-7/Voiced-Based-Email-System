@@ -72,12 +72,12 @@ if (annyang) {
         alert("H");*/
       },
 
-      /*'from *tag': function(variable) {
+      'from *tag': function(variable) {
       	//alert("Hello");
-      let reciver = document.getElementById("sender");
+      let sender = document.getElementById("sender");
       sender.value = variable.toLowerCase().concat("@gmail.com"); 
       Sender();
-      },*/
+      },
 
       'to *tag': function(variable) {
       //	alert("h");
@@ -196,7 +196,7 @@ $("#m").click(function (event){
          $('#send').trigger('click');
       },
 
-       'new *tag': function()
+       'write *tag': function()
       {
         let compose = document.getElementById("compose");
         //compose.value = variable;

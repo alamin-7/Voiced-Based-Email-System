@@ -34,6 +34,7 @@
     width:80%;
     max-width:1000px;
     background-color: #fff;
+    padding: 2%;
     float:right;
     left:50%;
     height:100%;
@@ -61,11 +62,6 @@ li a {
     text-decoration: none;
 }
 
-li p{
-    text-align: right;
-    float: right;
-    color: black;
-}
 
 li a:hover:not(.active) {
     background-color: #000;
@@ -75,12 +71,12 @@ li a:hover:not(.active) {
 
 <body>
 <div class="header">
+    
 <ul>
   <li><a href="{{URL::to('/writemessage')}}"><button id="compose"type="button" >Compose</button></a></li>
    <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >All Catagories</button></a></li>
     <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Social</button></a></li>
      <li><a href="{{URL::to('/writemessage')}}"><button id="composed"type="button" >Important</button></a></li>
-     <li><p>{{session('data')['username']}}</p></li>
 </ul>
 </div>
 <div class="container">
